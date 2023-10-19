@@ -4,7 +4,6 @@ import { AppRoutes, BeforeLoginRoutes } from "@/config/routes";
 import { loadAuthUserCreator } from "@/stores/auth/action";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { PageContainerLayout } from "./Outlet";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -18,7 +17,7 @@ export default function App() {
     <BrowserRouter>
       {auth ? (
         <Routes>
-          <Route path="/" element={<PageContainerLayout />}>
+          <Route path="/">
             {AppRoutes.map((route, index) => (
               <Route key={index} element={route.component} {...route} />
             ))}

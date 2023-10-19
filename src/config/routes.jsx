@@ -1,12 +1,12 @@
 import { pathnameConfig } from "@/constant/pathnameConfig";
-import { ExamplePages } from "@/container/pages/index";
+import { Home } from "@/container/pages/index";
 
 export const BeforeLoginRoutes = [];
 
 export const AppRoutes = [
   {
     path: pathnameConfig.ROOT_URL,
-    component: <ExamplePages />,
+    component: <Home />,
     exact: true,
   },
 ];

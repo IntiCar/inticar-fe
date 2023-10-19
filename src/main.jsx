@@ -3,11 +3,9 @@ import * as ReactDOM from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Provider } from "react-redux";
 
+import "./assets/scss/main.scss";
 import App from "./container/app/App";
 import store from "./stores";
-
-import "@fontsource/noto-sans";
-import "./index.css";
 
 const queryClient = new QueryClient({
   defaultOptions: {
