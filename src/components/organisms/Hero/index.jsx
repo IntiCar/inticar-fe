@@ -1,13 +1,18 @@
-"use client";
+'use client';
 
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { Navigation } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import HeroFilterTabs from "@/components/molecules/HeroFilterTabs";
+import HeroFilterTabs from '@/components/molecules/HeroFilterTabs';
+
+import Image1 from '@/assets/images/home/1.jpg';
+import Image2 from '@/assets/images/home/2.jpg';
+import Image6 from '@/assets/images/home/6.jpg';
+import TitleBottomBorder from '@/assets/images/home/title-bottom-border.svg';
 
 const Image = styled.img`
   width: 140px;
@@ -17,24 +22,24 @@ const Image = styled.img`
 const Hero = () => {
   const carSlides = [
     {
-      image: "/images/home/6.jpg",
-      title: "BMW M8 Gran Coupe Base",
-      price: "$746",
+      image: Image6,
+      title: 'BMW M8 Gran Coupe Base',
+      price: '$746',
     },
     {
-      image: "/images/home/2.jpg",
-      title: "BMW M8 Gran Audi A8 L 55",
-      price: "$865",
+      image: Image2,
+      title: 'BMW M8 Gran Audi A8 L 55',
+      price: '$865',
     },
     {
-      image: "/images/home/1.jpg",
-      title: "BMW M8 Gran Coupe",
-      price: "$976",
+      image: Image1,
+      title: 'BMW M8 Gran Coupe',
+      price: '$976',
     },
   ];
 
   return (
-    <div className="home-one home-six mt70-992 ovh pt0-sm">
+    <div className="home-one home-six mt70-992 ovh pt0-sm bg-home6">
       <div className="container-fluid p0">
         <div className="main-banner-wrapper">
           <div className="banner-style-one">
@@ -44,8 +49,8 @@ const Hero = () => {
               loop={true}
               modules={[Navigation]}
               navigation={{
-                nextEl: ".right-btn",
-                prevEl: ".left-btn",
+                nextEl: '.right-btn',
+                prevEl: '.left-btn',
               }}
             >
               {carSlides.map((slide, index) => (
@@ -54,7 +59,7 @@ const Hero = () => {
                     className="slide slide_image"
                     style={{
                       backgroundImage: `url(${slide.image})`,
-                      height: "900px",
+                      height: '900px',
                     }}
                   >
                     <div className="container home_fixed_content">
@@ -71,15 +76,15 @@ const Hero = () => {
                                     width={110}
                                     height={14}
                                     style={{
-                                      objectFit: "contain",
+                                      objectFit: 'contain',
                                     }}
                                     priority
                                     className="objects"
-                                    src="/images/home/title-bottom-border.svg"
+                                    src={TitleBottomBorder}
                                     alt="border image"
                                   />
                                 </span>
-                                <span>{slide.price}</span>{" "}
+                                <span>{slide.price}</span>{' '}
                                 <small className="text-white d-inline-block ms-2">
                                   / Month
                                 </small>
