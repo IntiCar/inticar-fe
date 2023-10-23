@@ -1,0 +1,28 @@
+module.exports = [
+  {
+    label: 'Home',
+    path: '/',
+    subMenu: [],
+  },
+  {
+    label: 'Explore',
+    subMenu: [],
+  },
+  {
+    label: 'Blog',
+    subMenu: [
+      {
+        label: 'Blog Grid',
+        path: '/blog-grid',
+      },
+      {
+        label: 'Blog List',
+        path: '/blog-list',
+      },
+      {
+        label: 'Blog Single',
+        path: '/blog-single',
+      },
+    ],
+  },
+];
