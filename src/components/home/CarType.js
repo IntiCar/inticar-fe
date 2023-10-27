@@ -1,42 +1,42 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 const CarType = () => {
   const listings = [
     {
-      imgSrc: "/images/listing/browse1.jpg",
-      title: "Compact",
-      numListings: "59 Listings",
-      colClasses: "col-md-6",
-      delay: "100",
+      imgSrc: '/images/listing/browse1.jpg',
+      title: 'Compact',
+      numListings: '59 Listings',
+      colClasses: 'col-md-6',
+      delay: '100',
     },
     {
-      imgSrc: "/images/listing/browse2.jpg",
-      title: "Sedan",
-      numListings: "8912 Listings",
-      colClasses: "col-md-6",
-      delay: "200",
+      imgSrc: '/images/listing/browse1.jpg',
+      title: 'Sedan',
+      numListings: '8912 Listings',
+      colClasses: 'col-md-6',
+      delay: '200',
     },
     {
-      imgSrc: "/images/listing/browse3.jpg",
-      title: "SUV",
-      numListings: "775 Listings",
-      colClasses: "col-md-6 col-lg-4",
-      delay: "300",
+      imgSrc: '/images/listing/browse1.jpg',
+      title: 'SUV',
+      numListings: '775 Listings',
+      colClasses: 'col-md-6 col-lg-4',
+      delay: '300',
     },
     {
-      imgSrc: "/images/listing/browse4.jpg",
-      title: "Convertible",
-      numListings: "12 Listings",
-      colClasses: "col-md-6 col-lg-4",
-      delay: "400",
+      imgSrc: '/images/listing/browse1.jpg',
+      title: 'Convertible',
+      numListings: '12 Listings',
+      colClasses: 'col-md-6 col-lg-4',
+      delay: '400',
     },
     {
-      imgSrc: "/images/listing/browse5.jpg",
-      title: "Coupe",
-      numListings: "45 Listings",
-      colClasses: "col-md-6 col-lg-4",
-      delay: "500",
+      imgSrc: '/images/listing/browse1.jpg',
+      title: 'Coupe',
+      numListings: '45 Listings',
+      colClasses: 'col-md-6 col-lg-4',
+      delay: '500',
     },
   ];
 
@@ -55,9 +55,9 @@ const CarType = () => {
                 width={450}
                 height={303}
                 style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
                 }}
                 priority
                 src={listing.imgSrc}

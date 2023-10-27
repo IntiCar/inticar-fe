@@ -1,36 +1,36 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const ListingContent = () => {
   const carListings = [
     {
       id: 1,
-      make: "Volvo",
-      model: "XC90",
+      make: 'Volvo',
+      model: 'XC90',
       year: 2020,
-      transmission: "Automatic",
-      fuelType: "Diesel",
-      price: "$129",
-      imageSrc: "/images/listing/1.jpg",
+      transmission: 'Automatic',
+      fuelType: 'Diesel',
+      price: '$129',
+      imageSrc: '/images/listing/2.jpg',
     },
     {
       id: 2,
-      make: "Audi",
-      model: "A8 L 55",
+      make: 'Audi',
+      model: 'A8 L 55',
       year: 2021,
-      transmission: "Automatic",
-      fuelType: "Diesel",
-      price: "$129",
-      imageSrc: "/images/listing/5.jpg",
+      transmission: 'Automatic',
+      fuelType: 'Diesel',
+      price: '$129',
+      imageSrc: '/images/listing/3.jpg',
     },
     {
       id: 3,
-      make: "Bentley",
-      model: "Bentayga V8",
+      make: 'Bentley',
+      model: 'Bentayga V8',
       year: 2020,
-      transmission: "Automatic",
-      fuelType: "Diesel",
-      price: "$129",
-      imageSrc: "/images/listing/7.jpg",
+      transmission: 'Automatic',
+      fuelType: 'Diesel',
+      price: '$129',
+      imageSrc: '/images/listing/4.jpg',
     },
   ];
 
@@ -72,9 +72,9 @@ const ListingContent = () => {
                         width={150}
                         height={96}
                         style={{
-                          objectFit: "cover",
-                          width: "100%",
-                          height: "100%",
+                          objectFit: 'cover',
+                          width: '100%',
+                          height: '100%',
                         }}
                         className="img-fluid"
                         src={car.imageSrc}
