@@ -2,11 +2,10 @@ module.exports = [
   {
     label: 'Home',
     path: '/',
-    subMenu: [],
   },
   {
     label: 'Explore',
-    subMenu: [],
+    path: '/explore',
   },
   {
     label: 'Blog',
