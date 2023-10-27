@@ -51,11 +51,7 @@ const Header = () => {
                 <span className="flaticon-magnifiying-glass icon vam"></span>
               </a>
             </li>
-            <li className="add_listing">
-              <Link href="/add-listings">
-                + <span className="dn-lg">Add Listing</span>
-              </Link>
-            </li>{' '}
+
             <li>
               <a href="#" data-bs-toggle="modal" data-bs-target="#logInModal">
                 Login
