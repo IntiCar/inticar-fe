@@ -1,14 +1,13 @@
-"use client";
-import React, { useEffect, useRef, useState } from "react";
-import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
+'use client';
+import React, { useEffect, useRef, useState } from 'react';
+import CountUp from 'react-countup';
 
 const Counter = () => {
   const counters = [
-    { number: 27600, label: "Cars For Sale", delay: 100 },
-    { number: 6500, label: "Dealer Reviews", delay: 200 },
-    { number: 8230, label: "Visitors Pre Day", delay: 300 },
-    { number: 5250, label: "Verified Dealers", delay: 400 },
+    { number: 27600, label: 'Cars For Sale', delay: 100 },
+    { number: 6500, label: 'Dealer Reviews', delay: 200 },
+    { number: 8230, label: 'Visitors Pre Day', delay: 300 },
+    { number: 5250, label: 'Verified Dealers', delay: 400 },
   ];
 
   return (
@@ -20,7 +19,7 @@ const Counter = () => {
           data-aos="fade-up"
           data-wow-delay={counter.delay}
         >
-          <div className="funfact_one home6_style text-center">
+          <div className="funfact_one text-center">
             <div className="details">
               <div className="timer">
                 <CounterWithAnimation end={counter.number} />
@@ -41,7 +40,7 @@ const CounterWithAnimation = ({ end }) => {
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: "0px",
+      rootMargin: '0px',
       threshold: 0.1,
     };
 
@@ -66,7 +65,7 @@ const CounterWithAnimation = ({ end }) => {
 
   return (
     <span ref={countRef}>
-      {inView ? <CountUp end={end} duration={2} separator="," /> : "0"}
+      {inView ? <CountUp end={end} duration={2} separator="," /> : '0'}
     </span>
   );
 };
