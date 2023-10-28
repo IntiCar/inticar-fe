@@ -15,11 +15,6 @@ import FooterItems from '../common/footer/FooterItems';
 import CopyRight from '../common/footer/CopyRight';
 import LoginSignupModal from '../common/login-signup';
 
-export const metadata = {
-  title: 'Home-6 || Voiture - Automotive & Car Dealer NextJS Template',
-  description: `Voiture - Automotive & Car Dealer NextJS Template. `,
-};
-
 const Home = () => {
   return (
     <div className="wrapper ovh">
@@ -109,7 +104,7 @@ const Home = () => {
                 <Image
                   width={636}
                   height={677}
-                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+                  style={{ objectFit: 'cover', width: '100%' }}
                   src="/images/service/1.jpg"
                   alt="1.jpg"
                 />
@@ -124,13 +119,11 @@ const Home = () => {
       {/* End How It Works */}
 
       {/* <!-- image with coutner --> */}
-      <section className="divider-home6-style pb90 bg-img2">
-        <div className="container">
-          <div className="row">
-            <Counter />
-          </div>
+      <div className="container">
+        <div className="row">
+          <Counter />
         </div>
-      </section>
+      </div>
       {/* <!-- End image with coutner --> */}
 
       {/* Our Testimonials */}
