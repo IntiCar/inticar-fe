@@ -1,12 +1,19 @@
 'use client';
 import Aos from 'aos';
-import { useEffect } from 'react';
-import { Inter } from 'next/font/google';
 import 'aos/dist/aos.css';
+import { Inter } from 'next/font/google';
+import { useEffect } from 'react';
 import '../../public/scss/main.scss';
 
 import styled from 'styled-components';
-import ScrollToTop from '../components/common/ScrollTop';
+
+import DefaultHeader from '@/src/components/common/DefaultHeader';
+import Footer from '@/src/components/common/Footer';
+import HeaderSidebar from '@/src/components/common/HeaderSidebar';
+import HeaderTop from '@/src/components/common/HeaderTop';
+import MobileMenu from '@/src/components/common/MobileMenu';
+import ScrollToTop from '@/src/components/common/ScrollTop';
+import LoginSignupModal from '@/src/components/common/login-signup';
 
 if (typeof window !== 'undefined') {
   import('bootstrap');
@@ -31,8 +38,38 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Body cz-shortcut-listen="false">
-        {children}
-        <ScrollToTop />
+        <div className="wrapper">
+          <div
+            className="offcanvas offcanvas-end"
+            tabIndex="-1"
+            id="offcanvasRight"
+            aria-labelledby="offcanvasRightLabel"
+          >
+            <HeaderSidebar />
+          </div>
+
+          <HeaderTop />
+
+          <DefaultHeader />
+
+          <MobileMenu />
+
+          {children}
+          <ScrollToTop />
+
+          <Footer />
+
+          <div
+            className="sign_up_modal modal fade"
+            id="logInModal"
+            data-backdrop="static"
+            data-keyboard=""
+            tabIndex={-1}
+            aria-hidden="true"
+          >
+            <LoginSignupModal />
+          </div>
+        </div>
       </Body>
     </html>
   );

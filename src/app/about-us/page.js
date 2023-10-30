@@ -1,14 +1,8 @@
-import Footer from '@/src/components/common/Footer';
-import DefaultHeader from '../../components/common/DefaultHeader';
-import HeaderSidebar from '../../components/common/HeaderSidebar';
-import HeaderTop from '../../components/common/HeaderTop';
-import MobileMenu from '../../components/common/MobileMenu';
-import AboutTextBlock from '@/src/components/pages/about-us/AboutTextBlock';
-import WhyChoose from '@/src/components/common/WhyChoose';
+import Partner from '@/src/components/common/Partner';
 import Team from '@/src/components/common/Team';
 import Testimonial from '@/src/components/common/Testimonial';
-import Partner from '@/src/components/common/Partner';
-import LoginSignupModal from '@/src/components/common/login-signup';
+import WhyChoose from '@/src/components/common/WhyChoose';
+import AboutTextBlock from '@/src/components/pages/about-us/AboutTextBlock';
 
 export const metadata = {
   title: 'About Us || Voiture - Automotive & Car Dealer NextJS Template',
@@ -17,28 +11,6 @@ export const metadata = {
 const AboutUs = () => {
   return (
     <div className="wrapper">
-      <div
-        className="offcanvas offcanvas-end"
-        tabIndex="-1"
-        id="offcanvasRight"
-        aria-labelledby="offcanvasRightLabel"
-      >
-        <HeaderSidebar />
-      </div>
-      {/* Sidebar Panel End */}
-
-      {/* header top */}
-      <HeaderTop />
-      {/* End header top */}
-
-      {/* Main Header Nav */}
-      <DefaultHeader />
-      {/* End Main Header Nav */}
-
-      {/* Main Header Nav For Mobile */}
-      <MobileMenu />
-      {/* End Main Header Nav For Mobile */}
-
       {/* Inner Page Breadcrumb */}
       <section className="inner_page_breadcrumb">
         <div className="container">
@@ -162,23 +134,6 @@ const AboutUs = () => {
         </div>
       </section>
       {/* End  Our Partners */}
-
-      {/* Our Footer */}
-      <Footer />
-      {/* End Our Footer */}
-
-      {/* Modal */}
-      <div
-        className="sign_up_modal modal fade"
-        id="logInModal"
-        data-backdrop="static"
-        data-keyboard="false"
-        tabIndex={-1}
-        aria-hidden="true"
-      >
-        <LoginSignupModal />
-      </div>
-      {/* End Modal */}
     </div>
     // End wrapper
   );
