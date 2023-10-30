@@ -1,29 +1,29 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const categories = [
   {
-    icon: "flaticon-car-black-side-view-pointing-left",
-    title: "Compact",
+    icon: 'flaticon-car-black-side-view-pointing-left',
+    title: 'Compact',
     listing: 12,
   },
   {
-    icon: "flaticon-sedan-car-model",
-    title: "Sedan",
+    icon: 'flaticon-sedan-car-model',
+    title: 'Sedan',
     listing: 24,
   },
   {
-    icon: "flaticon-jeep",
-    title: "SUV",
+    icon: 'flaticon-jeep',
+    title: 'SUV',
     listing: 675,
   },
   {
-    icon: "flaticon-cabrio-car",
-    title: "Convertible",
+    icon: 'flaticon-cabrio-car',
+    title: 'Convertible',
     listing: 543,
   },
   {
-    icon: "flaticon-coupe-car",
-    title: "Coupe",
+    icon: 'flaticon-coupe-car',
+    title: 'Coupe',
     listing: 99,
   },
 ];
@@ -45,7 +45,7 @@ const Category = () => {
             </div>
             <div className="details">
               <p className="title">
-                <Link href="/listing-single-v2">{category.title}</Link>
+                <Link href="/detail">{category.title}</Link>
               </p>
               <p className="para">{category.listing} Listings</p>
             </div>

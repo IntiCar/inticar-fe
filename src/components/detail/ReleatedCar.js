@@ -1,10 +1,10 @@
-"use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
-import "swiper/swiper-bundle.css";
-import listingCar from "@/data/listingCar";
-import Link from "next/link";
-import Image from "next/image";
+'use client';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper';
+import 'swiper/swiper-bundle.css';
+import listingCar from '@/data/listingCar';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const ReleatedCar = () => {
   return (
@@ -14,7 +14,7 @@ const ReleatedCar = () => {
         speed={1000}
         modules={[Pagination]}
         pagination={{
-          el: ".car-for-rent-pag",
+          el: '.car-for-rent-pag',
           spaceBetween: 10,
           clickable: true,
         }}
@@ -54,9 +54,9 @@ const ReleatedCar = () => {
                     width={284}
                     height={183}
                     style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
                     }}
                     priority
                     src={listing.image}
@@ -66,13 +66,13 @@ const ReleatedCar = () => {
                     <ul className="mb0">
                       <li className="list-inline-item">
                         <a className="text-white" href="#">
-                          <span className="flaticon-photo-camera mr3" />{" "}
+                          <span className="flaticon-photo-camera mr3" />{' '}
                           {listing.photosCount}
                         </a>
                       </li>
                       <li className="list-inline-item">
                         <a className="text-white" href="#">
-                          <span className="flaticon-play-button mr3" />{" "}
+                          <span className="flaticon-play-button mr3" />{' '}
                           {listing.videosCount}
                         </a>
                       </li>
@@ -97,7 +97,7 @@ const ReleatedCar = () => {
                   <div className="wrapper">
                     <h5 className="price">${listing.price}</h5>
                     <h6 className="title">
-                      <Link href="/listing-single-v1">{listing.title}</Link>
+                      <Link href="/detail">{listing.title}</Link>
                     </h6>
                     <div className="listign_review">
                       <ul className="mb0">
@@ -116,7 +116,7 @@ const ReleatedCar = () => {
                         </li>
                       </ul>
                     </div>
-                  </div>{" "}
+                  </div>{' '}
                   <div className="listing_footer">
                     <ul className="mb0">
                       <li className="list-inline-item">

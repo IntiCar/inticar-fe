@@ -1,6 +1,6 @@
-import listingCar from "@/data/listingCar";
-import Image from "next/image";
-import Link from "next/link";
+import listingCar from '@/data/listingCar';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const CarItems = () => {
   return (
@@ -24,9 +24,9 @@ const CarItems = () => {
                 width={260}
                 height={167}
                 style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
                 }}
                 priority
                 src={listing.image}
@@ -36,13 +36,13 @@ const CarItems = () => {
                 <ul className="mb0">
                   <li className="list-inline-item">
                     <a className="text-white" href="#">
-                      <span className="flaticon-photo-camera mr3" />{" "}
+                      <span className="flaticon-photo-camera mr3" />{' '}
                       {listing.photosCount}
                     </a>
                   </li>
                   <li className="list-inline-item">
                     <a className="text-white" href="#">
-                      <span className="flaticon-play-button mr3" />{" "}
+                      <span className="flaticon-play-button mr3" />{' '}
                       {listing.videosCount}
                     </a>
                   </li>
@@ -70,7 +70,7 @@ const CarItems = () => {
               <div className="wrapper">
                 <h5 className="price">${listing.price}</h5>
                 <h6 className="title">
-                  <Link href="/listing-single-v1">{listing.title}</Link>
+                  <Link href="/detail">{listing.title}</Link>
                 </h6>
                 <div className="listign_review">
                   <ul className="mb0">
