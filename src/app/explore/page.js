@@ -1,11 +1,6 @@
-import MobileMenu from '@/src/components/common/MobileMenu';
-import LoginSignupModal from '@/src/components/common/login-signup';
-import CarItems from '@/src/components/listing/listing-styles/listing-v6/CarItems';
-import SidebarAdvnaceFilter from '@/src/components/listing/SidebarAdvanceFilter';
 import ListGridFilter2 from '@/src/components/listing/ListGridFilter2';
-import Footer from '@/src/components/common/Footer';
-import DefaultHeader from '@/src/components/common/DefaultHeader';
-import HeaderSidebar from '@/src/components/common/HeaderSidebar';
+import SidebarAdvnaceFilter from '@/src/components/listing/SidebarAdvanceFilter';
+import CarItems from '@/src/components/listing/listing-styles/listing-v6/CarItems';
 
 export const metadata = {
   title: 'Explore || BliMobilId',
@@ -15,24 +10,6 @@ export const metadata = {
 const Explore = () => {
   return (
     <div className="wrapper">
-      <div
-        className="offcanvas offcanvas-end"
-        tabIndex="-1"
-        id="offcanvasRight"
-        aria-labelledby="offcanvasRightLabel"
-      >
-        <HeaderSidebar />
-      </div>
-      {/* Sidebar Panel End */}
-
-      {/* Main Header Nav */}
-      <DefaultHeader />
-      {/* End Main Header Nav */}
-
-      {/* Main Header Nav For Mobile */}
-      <MobileMenu />
-      {/* End Main Header Nav For Mobile */}
-
       {/* Inner Page Breadcrumb */}
       <section className="inner_page_breadcrumb">
         <div className="container">
@@ -97,21 +74,6 @@ const Explore = () => {
       </section>
       {/* Listing Grid View */}
 
-      {/* Our Footer */}
-      <Footer />
-      {/* End Our Footer */}
-
-      {/* Modal */}
-      <div
-        className="sign_up_modal modal fade"
-        id="logInModal"
-        data-backdrop="static"
-        data-keyboard="false"
-        tabIndex={-1}
-        aria-hidden="true"
-      >
-        <LoginSignupModal />
-      </div>
       {/* End Modal */}
     </div>
     // End wrapper

@@ -1,44 +1,17 @@
 import Image from 'next/image';
-import HeaderSidebar from '../common/HeaderSidebar';
-import MobileMenu from '../common/MobileMenu';
-import Category from './Category';
-import FeatureListing from './FeatureListing';
-import Header from './Header';
-import Hero from './Hero';
-import WhyChoose from './WhyChoose';
-import Counter from './Counter';
-import Testimonial from './Testimonial';
-import CarType from './CarType';
 import Link from 'next/link';
+import CarType from './CarType';
+import Category from './Category';
+import Counter from './Counter';
+import FeatureListing from './FeatureListing';
+import Hero from './Hero';
 import SaleBanner from './SaleBanner';
-import FooterItems from '../common/footer/FooterItems';
-import CopyRight from '../common/footer/CopyRight';
-import LoginSignupModal from '../common/login-signup';
+import Testimonial from './Testimonial';
+import WhyChoose from './WhyChoose';
 
 const Home = () => {
   return (
     <div className="wrapper ovh">
-      {/* Sidebar Panel Start */}
-
-      <div
-        className="offcanvas offcanvas-end"
-        tabIndex="-1"
-        id="offcanvasRight"
-        aria-labelledby="offcanvasRightLabel"
-      >
-        <HeaderSidebar />
-      </div>
-      {/* Sidebar Panel End */}
-
-      {/* Main Header Nav */}
-      <Header />
-      {/* End Main Header Nav */}
-
-      {/* Main Header Nav For Mobile */}
-      <MobileMenu />
-      {/* End Main Header Nav For Mobile */}
-
-      {/* Hero */}
       <Hero />
       {/* End Hero */}
 
@@ -169,7 +142,7 @@ const Home = () => {
           <div className="row mt20">
             <div className="col-lg-12" data-aos="fade-up" data-aos-delay="100">
               <div className="text-center">
-                <Link href="/listing-v1" className="more_listing">
+                <Link href="/explore" className="more_listing">
                   Show All Cars{' '}
                   <span className="icon">
                     <span className="fas fa-plus" />
@@ -191,61 +164,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* <!-- End Divider --> */}
-
-      {/* Our Footer */}
-      <section className="footer_one home6_style pt50 pb25">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6 col-xl-7">
-              <div className="footer_about_widget text-start">
-                <div className="logo mb40 mb0-sm">
-                  <Image
-                    width={140}
-                    height={45}
-                    src="/images/header-logo.svg"
-                    alt="header-logo.png"
-                  />
-                </div>
-              </div>
-            </div>
-            {/* End .col-md-6 */}
-
-            {/* <div className="col-md-8 col-xl-5">
-              <div className="footer_menu_widget text-start text-md-end mt15">
-                <ul>
-                  <Navigation />
-                </ul>
-              </div>
-            </div> */}
-          </div>
-        </div>
-        {/* End .container */}
-
-        <hr />
-        <div className="container pt80 pt20-sm pb70 pb0-sm">
-          <FooterItems />
-          {/* End .row */}
-        </div>
-        {/* End .container */}
-        <CopyRight />
-      </section>
-      {/* End Our Footer */}
-
-      {/* Modal */}
-      <div
-        className="sign_up_modal modal fade"
-        id="logInModal"
-        data-backdrop="static"
-        data-keyboard="false"
-        tabIndex={-1}
-        aria-hidden="true"
-      >
-        <LoginSignupModal />
-      </div>
-      {/* End Modal */}
     </div>
-    // End wrapper
   );
 };
 
