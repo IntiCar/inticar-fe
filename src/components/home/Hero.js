@@ -74,10 +74,7 @@ const Hero = () => {
                                 / Month
                               </small>
                             </h3>
-                            <Link
-                              href="/listing-single-v1"
-                              className="btn banner-btn"
-                            >
+                            <Link href="/detail" className="btn banner-btn">
                               Learn More
                             </Link>
                           </div>

@@ -1,10 +1,10 @@
-"use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
-import "swiper/swiper-bundle.css";
-import listingCar from "@/data/listingCar";
-import Image from "next/image";
-import Link from "next/link";
+'use client';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper';
+import 'swiper/swiper-bundle.css';
+import listingCar from '@/data/listingCar';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const FeatureListing = () => {
   return (
@@ -16,8 +16,8 @@ const FeatureListing = () => {
         loop={true}
         modules={[Navigation]}
         navigation={{
-          nextEl: ".p2-arrow-next",
-          prevEl: ".p2-arrow-prev",
+          nextEl: '.p2-arrow-next',
+          prevEl: '.p2-arrow-prev',
         }}
         breakpoints={{
           // breakpoints for responsive design
@@ -56,9 +56,9 @@ const FeatureListing = () => {
                     width={284}
                     height={183}
                     style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
                     }}
                     priority
                     alt="car"
@@ -68,13 +68,13 @@ const FeatureListing = () => {
                     <ul className="mb0">
                       <li className="list-inline-item">
                         <a className="text-white" href="#">
-                          <span className="flaticon-photo-camera mr3" />{" "}
+                          <span className="flaticon-photo-camera mr3" />{' '}
                           {listing.photosCount}
                         </a>
                       </li>
                       <li className="list-inline-item">
                         <a className="text-white" href="#">
-                          <span className="flaticon-play-button mr3" />{" "}
+                          <span className="flaticon-play-button mr3" />{' '}
                           {listing.videosCount}
                         </a>
                       </li>
@@ -99,7 +99,7 @@ const FeatureListing = () => {
                   <div className="wrapper">
                     <h5 className="price">${listing.price}</h5>
                     <h6 className="title">
-                      <Link href="/listing-single-v1">{listing.title}</Link>
+                      <Link href="/detail">{listing.title}</Link>
                     </h6>
                     <div className="listign_review">
                       <ul className="mb0">
@@ -118,7 +118,7 @@ const FeatureListing = () => {
                         </li>
                       </ul>
                     </div>
-                  </div>{" "}
+                  </div>{' '}
                   <div className="listing_footer">
                     <ul className="mb0">
                       <li className="list-inline-item">

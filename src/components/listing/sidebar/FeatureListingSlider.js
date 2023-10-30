@@ -1,28 +1,28 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import React, { useState } from "react";
-import SwiperCore, { Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useState } from 'react';
+import SwiperCore, { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
 
 SwiperCore.use([Pagination]);
 
 const items = [
   {
-    image: "/images/listing/16.jpg",
-    price: "$129",
-    title: "Mercedes-Benz S 560 - 2021",
+    image: '/images/listing/16.jpg',
+    price: '$129',
+    title: 'Mercedes-Benz S 560 - 2021',
   },
   {
-    image: "/images/listing/16.jpg",
-    price: "$129",
-    title: "Mercedes-Benz S 560 - 2021",
+    image: '/images/listing/16.jpg',
+    price: '$129',
+    title: 'Mercedes-Benz S 560 - 2021',
   },
   {
-    image: "/images/listing/16.jpg",
-    price: "$129",
-    title: "Mercedes-Benz S 560 - 2021",
+    image: '/images/listing/16.jpg',
+    price: '$129',
+    title: 'Mercedes-Benz S 560 - 2021',
   },
 ];
 
@@ -31,7 +31,7 @@ const FeatureListingSlider = () => {
     <Swiper
       modules={[Pagination]}
       pagination={{
-        el: ".featured-pag",
+        el: '.featured-pag',
         spaceBetween: 10,
         clickable: true,
       }}
@@ -44,7 +44,7 @@ const FeatureListingSlider = () => {
                 <Image
                   width={242}
                   height={172}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   src={item.image}
                   alt={item.title}
                 />
@@ -53,7 +53,7 @@ const FeatureListingSlider = () => {
                 <div className="wrapper">
                   <h5 className="price">{item.price}</h5>
                   <h6 className="title">
-                    <Link href="/listing-single-v2">{item.title}</Link>
+                    <Link href="/detail">{item.title}</Link>
                   </h6>
                 </div>
               </div>
