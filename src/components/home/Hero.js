@@ -1,36 +1,41 @@
 'use client';
-import React from 'react';
+import Link from 'next/link';
 import { Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import Image from 'next/image';
-import Link from 'next/link';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Hero = () => {
   const carSlides = [
     {
       image: '/images/home/1.jpg',
-      title: 'BMW M8 Gran Coupe Base',
-      price: '$746',
-    },
-    {
-      image: '/images/home/2.jpg',
-      title: 'Volvo V90 R-Design',
-      price: '$865',
+      title: 'Temukan Kendaraan Impianmu',
+      subtitle: 'Ribuan mobil berkualitas siap menemani perjalanan Anda',
+      cta: 'Cari Sekarang',
+      ctaLink: '/explore',
     },
     {
       image: '/images/home/3.jpg',
-      title: 'The BMW X1',
-      price: '$976',
+      title: 'Jual Mobil Anda dengan Mudah',
+      subtitle:
+        'Dapatkan penawaran terbaik untuk mobil Anda dalam waktu singkat',
+      cta: 'Daftar Mobil',
+      ctaLink: '/add-listings',
+    },
+    {
+      image: '/images/home/4.jpg',
+      title: 'Cicilan Mudah, Mobil Impian',
+      subtitle: 'Miliki Mobil Impian Anda dengan Cicilan yang Mudah.',
+      cta: 'Pelajari Lebih Lanjut',
+      ctaLink: '/explore',
     },
   ];
 
   return (
-    <div className="home-one home-six mt70-992 ovh pt0-sm">
+    <div className="mt70-992 ovh pt0-sm">
       <div className="container-fluid p0">
         <div className="main-banner-wrapper">
-          <div className="banner-style-one">
+          <div className="p-4 banner-style-one">
             <Swiper
               spaceBetween={0}
               slidesPerView={1}
@@ -44,38 +49,31 @@ const Hero = () => {
               {carSlides.map((slide, index) => (
                 <SwiperSlide key={index}>
                   <div
-                    className="slide slide_image"
+                    className="slide slide_image rounded-3"
                     style={{
                       backgroundImage: `url(${slide.image})`,
-                      height: '900px',
+                      backgroundSize: 'cover',
+                      height: '500px',
+                      backgroundPosition: 'center',
                     }}
                   >
                     <div className="container home_fixed_content">
                       <div className="row">
                         <div className="home-content-home6-style">
                           <div className="home_content">
-                            <h2 className="banner-title">{slide.title}</h2>
+                            <h2 className="banner-title text-thm">
+                              {slide.title}
+                            </h2>
                             <h3 className="banner_top_title text-thm d-flex align-items-baseline">
-                              <span className="aminated-object1">
-                                <Image
-                                  width={110}
-                                  height={14}
-                                  style={{
-                                    objectFit: 'contain',
-                                  }}
-                                  priority
-                                  className="objects"
-                                  src="/images/home/title-bottom-border.svg"
-                                  alt="border image"
-                                />
-                              </span>
-                              <span>{slide.price}</span>{' '}
-                              <small className="text-white d-inline-block ms-2">
-                                / Month
-                              </small>
+                              <p className="text-white d-inline-block ms-2 fw-normal fs-4">
+                                {slide.subtitle}
+                              </p>
                             </h3>
-                            <Link href="/detail" className="btn banner-btn">
-                              Learn More
+                            <Link
+                              href={slide.ctaLink}
+                              className="btn banner-btn"
+                            >
+                              {slide.cta}
                             </Link>
                           </div>
                         </div>

@@ -1,8 +1,10 @@
-import Link from "next/link";
-import MainMenu from "./MainMenu";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import MainMenu from "./MainMenu";
 
 const DefaultHeader = () => {
+  const path = usePathname();
   return (
     <header className="header-nav menu_style_home_one home3_style main-menu">
       {/* Ace Responsive Menu */}

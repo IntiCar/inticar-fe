@@ -10,7 +10,6 @@ import styled from 'styled-components';
 import DefaultHeader from '@/src/components/common/DefaultHeader';
 import Footer from '@/src/components/common/Footer';
 import HeaderSidebar from '@/src/components/common/HeaderSidebar';
-import HeaderTop from '@/src/components/common/HeaderTop';
 import MobileMenu from '@/src/components/common/MobileMenu';
 import ScrollToTop from '@/src/components/common/ScrollTop';
 import LoginSignupModal from '@/src/components/common/login-signup';
@@ -48,7 +47,6 @@ export default function RootLayout({ children }) {
             <HeaderSidebar />
           </div>
 
-          <HeaderTop />
 
           <DefaultHeader />
 
