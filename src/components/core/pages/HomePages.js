@@ -1,12 +1,12 @@
 import Image from 'next/image';
 
-import Address from './Adress';
-import Counter from './Counter';
-import Hero from './Hero';
-import SaleBanner from './SaleBanner';
-import WhyChoose from './WhyChoose';
+import Address from '@/src/components/home/Adress';
+import Counter from '@/src/components/home/Counter';
+import Hero from '@/src/components/home/Hero';
+import SaleBanner from '@/src/components/home/SaleBanner';
+import WhyChoose from '@/src/components/home/WhyChoose';
 
-const Home = () => {
+const HomePages = () => {
   return (
     <div className="wrapper ovh">
       <Hero />
@@ -88,4 +88,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePages;
