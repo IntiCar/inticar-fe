@@ -11,6 +11,8 @@ import HeaderSidebar from '@/src/components/common/HeaderSidebar';
 import MobileMenu from '@/src/components/common/MobileMenu';
 import ScrollToTop from '@/src/components/common/ScrollTop';
 import LoginSignupModal from '@/src/components/common/login-signup';
+import { getUserCookie } from '@/src/stores/auth/action';
+import { useDispatch } from 'react-redux';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,11 +24,16 @@ const Body = styled.body`
 `;
 
 export default function MainLayout({ children }) {
+  const dispatch = useDispatch();
   useEffect(() => {
     Aos.init({
       duration: 1200,
     });
   }, []);
+
+  useEffect(() => {
+    dispatch(getUserCookie());
+  }, [dispatch]);
 
   return (
     <Body cz-shortcut-listen="false">

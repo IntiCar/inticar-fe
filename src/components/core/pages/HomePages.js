@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 import Address from '@/src/components/home/Adress';

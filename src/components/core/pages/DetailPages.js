@@ -1,3 +1,5 @@
+'use client';
+
 import CarBrand from '@/src/components/detail/CarBrand';
 import CarLocation from '@/src/components/detail/CarLocation';
 import CarOffering from '@/src/components/detail/CarOffering';
@@ -10,10 +12,15 @@ import RelatedBestCar from '@/src/components/detail/RelatedBestCar';
 import ReviewBox from '@/src/components/detail/ReviewBox';
 import SellerDetail2 from '@/src/components/detail/sidebar/SellerDetail2';
 import BreadCrumb from '@/src/components/user-profile/BreadCrumb';
+import { useSelector } from 'react-redux';
 
 const DetailPages = () => {
+  const auth = useSelector((state) => state.auth);
+
+  console.log('hello', auth);
+
   return (
-    <div className='wrapper'>
+    <div className="wrapper">
       <section className="our-agent-single bgc-f9 pb90 mt70-992 pt30">
         <div className="container">
           <div className="row mb30">
